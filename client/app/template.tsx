@@ -10,10 +10,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
             exit={{ y: 0 }}
         >
             {children}
-            <div className="fixed top-0 left-0 w-full h-screen pointer-events-none z-[100]">
-                {/* Simple wipe effect overlay can be added here if needed, 
-                 but keeping it clean as per 'Template' request */}
-            </div>
+            <div className="fixed top-0 left-0 w-full h-screen pointer-events-none z-[100]"></div>
         </motion.div>
     );
 }

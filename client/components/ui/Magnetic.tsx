@@ -9,7 +9,6 @@ export default function Magnetic({ children }: { children: React.ReactNode }) {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        // Check for touch device capabilities
         const checkMobile = () => {
             setIsMobile(window.matchMedia("(pointer: coarse)").matches);
         };
@@ -35,7 +34,6 @@ export default function Magnetic({ children }: { children: React.ReactNode }) {
 
     const { x, y } = position;
 
-    // On mobile, render children without the motion wrapper logic or just static
     if (isMobile) {
         return <div>{children}</div>;
     }

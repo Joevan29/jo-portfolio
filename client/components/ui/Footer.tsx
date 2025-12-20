@@ -7,7 +7,6 @@ import Magnetic from './Magnetic';
 export default function Footer() {
     const [time, setTime] = useState("");
 
-    // Live Jakarta Time Logic
     useEffect(() => {
         const updateTime = () => {
             const date = new Date();
@@ -36,7 +35,6 @@ export default function Footer() {
         >
             <div className='fixed bottom-0 h-[800px] w-full z-50 overflow-hidden bg-slate-950 text-white'>
 
-                {/* 1. Background Gradient & Grid */}
                 <div className="absolute inset-0 z-0 bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950/90"></div>
                 <div
                     className="absolute inset-0 z-0 opacity-10"
@@ -49,7 +47,6 @@ export default function Footer() {
 
                 <div className="relative z-10 flex flex-col justify-between h-full pt-20 pb-12 px-8 md:px-20">
 
-                    {/* Top Row: CTA & Back to Top */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-white/10 pb-12">
                         <div>
                             <h3 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4">What's Next?</h3>
@@ -58,7 +55,6 @@ export default function Footer() {
                             </h2>
                         </div>
 
-                        {/* Back to Top Button */}
                         <div onClick={scrollToTop}>
                             <Magnetic>
                                 <div className="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition-all duration-300 group">
@@ -75,10 +71,8 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Middle: Contact Info */}
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mt-auto mb-12">
 
-                        {/* Email (Giant) */}
                         <div className="w-full">
                             <Magnetic>
                                 <a href="mailto:joevanpan@outlook.com" className="block w-full border-b border-white/20 pb-4 group">
@@ -91,7 +85,6 @@ export default function Footer() {
 
                     </div>
 
-                    {/* Bottom: Socials & Copyright */}
                     <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-sm font-mono text-gray-500 uppercase tracking-wider">
 
                         <div className='flex gap-8 text-white'>
@@ -109,7 +102,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Big Background Text */}
                     <h1 className="absolute bottom-[-5%] left-1/2 -translate-x-1/2 text-[25vw] font-black text-white/[0.03] select-none pointer-events-none whitespace-nowrap">
                         JOEVAN
                     </h1>

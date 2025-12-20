@@ -18,7 +18,6 @@ const Geometries = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // REDUCED count for performance (was 12/6, now 7/4)
     const count = isMobile ? 4 : 7;
 
     const shapes = useMemo(() => {
@@ -44,29 +43,29 @@ const Geometries = () => {
                     colliders="hull"
                     restitution={1.2}
                     friction={0}
-                    linearDamping={0.4} // Slower Damping = Less Physics Calculation Per Frame
+                    linearDamping={0.4}
                     angularDamping={0.4}
                 >
                     <Float speed={1.5} rotationIntensity={1.5} floatIntensity={1.5}>
                         <mesh scale={shape.scale}>
                             {shape.type === 0 && <boxGeometry args={[1, 1, 1]} />}
-                            {shape.type === 1 && <sphereGeometry args={[0.8, 16, 16]} />} {/* Lower Poly Sphere */}
+                            {shape.type === 1 && <sphereGeometry args={[0.8, 16, 16]} />}
                             {shape.type === 2 && <octahedronGeometry args={[1, 0]} />}
-                            {shape.type === 3 && <torusGeometry args={[0.6, 0.25, 12, 24]} />} {/* Lower Poly Torus */}
-                            {shape.type === 4 && <coneGeometry args={[0.7, 1.2, 16]} />} {/* Lower Poly Cone */}
+                            {shape.type === 3 && <torusGeometry args={[0.6, 0.25, 12, 24]} />}
+                            {shape.type === 4 && <coneGeometry args={[0.7, 1.2, 16]} />}
 
                             <MeshTransmissionMaterial
                                 backside={false}
-                                samples={isMobile ? 2 : 4} // Very low samples
-                                resolution={isMobile ? 128 : 256} // 128px resolution on mobile
+                                samples={isMobile ? 2 : 4}
+                                resolution={isMobile ? 128 : 256}
                                 thickness={0.6}
                                 roughness={0.2}
-                                anisotropy={0} // Expensive, turn off
-                                chromaticAberration={isMobile ? 0 : 0.3} // Expensive, turn off on mobile
+                                anisotropy={0}
+                                chromaticAberration={isMobile ? 0 : 0.3}
                                 color={isMobile ? "#4f46e5" : shape.color}
                                 distortion={0.1}
                                 distortionScale={0.3}
-                                temporalDistortion={0} // Expensive, turn off
+                                temporalDistortion={0}
                             />
                         </mesh>
                     </Float>
@@ -80,11 +79,11 @@ export default function FloatingShapes() {
     return (
         <div className='absolute inset-0 z-0 bg-transparent pointer-events-none'>
             <Canvas
-                dpr={[1, 1.5]} // Cap DPR at 1.5 to prevent 4K rendering lag
+                dpr={[1, 1.5]}
                 camera={{ position: [0, 0, 18], fov: 40 }}
                 gl={{
                     powerPreference: "high-performance",
-                    antialias: false, // OFF for FPS
+                    antialias: false,
                     stencil: false,
                     depth: false,
                     alpha: true

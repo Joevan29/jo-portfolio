@@ -20,14 +20,12 @@ interface Project {
 }
 
 export default function SlidingImages() {
-    // Direct Access - No Fetch Needed
     const slider1 = projects.slice(0, Math.ceil(projects.length / 2));
     const slider2 = projects.slice(Math.ceil(projects.length / 2));
 
     const displaySlider1 = slider1.length > 0 ? [...slider1, ...slider1, ...slider1] : [];
     const displaySlider2 = slider2.length > 0 ? [...slider2, ...slider2, ...slider2] : [];
 
-    // Use Scroll
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,

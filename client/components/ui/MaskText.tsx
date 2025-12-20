@@ -16,7 +16,6 @@ export default function MaskText({ children, className }: { children: React.Reac
         })
     };
 
-    // Handle both simpler strings and arrays of strings
     const phrases = Array.isArray(children) ? children : [children];
 
     return (

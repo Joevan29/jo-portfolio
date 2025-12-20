@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Magnetic from '../Magnetic';
@@ -55,17 +55,17 @@ function Curve() {
     const initialPath = `M100 0 L100 ${window.innerHeight} Q-100 ${window.innerHeight / 2} 100 0`;
     const targetPath = `M100 0 L100 ${window.innerHeight} Q100 ${window.innerHeight / 2} 100 0`;
 
-    const curve = {
+    const curve: Variants = {
         initial: {
             d: initialPath
         },
         enter: {
             d: targetPath,
-            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] }
         },
         exit: {
             d: initialPath,
-            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] }
         }
     }
 
@@ -76,8 +76,8 @@ function Curve() {
     )
 }
 
-const menuSlide = {
+const menuSlide: Variants = {
     initial: { x: "calc(100% + 100px)" },
-    enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
-    exit: { x: "calc(100% + 100px)", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }
+    enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] } },
+    exit: { x: "calc(100% + 100px)", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] } }
 }

@@ -18,7 +18,6 @@ interface Project {
 
 import { projects } from "../../../data/projects";
 
-// Type definition comes from data file structure implicitly, but re-defining explicitly for component clarity
 interface Project {
     ID: number;
     title: string;
@@ -27,14 +26,13 @@ interface Project {
     image: string;
     role: string;
     year: string;
-    tech_stack?: string; // Updated from 'stack'
+    tech_stack?: string;
     challenge: string;
     solution: string;
     gallery: string[];
 }
 
 export default async function ProjectPage({ params }: { params: { id: string } }) {
-    // STATIC DATA ACCESS
     const project = projects.find(p => p.ID === parseInt(params.id));
 
     if (!project) {
@@ -44,7 +42,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
     return (
         <main className="bg-slate-950 min-h-screen text-white pt-32 pb-20">
 
-            {/* BACK BUTTON */}
             <div className="fixed top-8 left-4 md:left-12 z-50 mix-blend-difference">
                 <Magnetic>
                     <Link href="/" className="flex items-center gap-2 group cursor-pointer">
@@ -59,7 +56,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                 </Magnetic>
             </div>
 
-            {/* HERO */}
             <section className="px-4 md:px-12 mb-20">
                 <div className="relative aspect-video w-full overflow-hidden rounded-2xl mb-12">
                     <img
@@ -74,7 +70,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     {project.title}
                 </h1>
 
-                {/* INFO BAR */}
                 <div className="border-y border-white/20 py-8 flex flex-col md:flex-row justify-between gap-8 font-mono text-sm uppercase tracking-widest text-slate-400">
                     <div>
                         <span className="text-white block mb-1">Role</span>
@@ -86,7 +81,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     </div>
                     <div>
                         <span className="text-white block mb-1">Stack</span>
-                        {/* Access tech_stack from the data object */}
                         {project.tech_stack}
                     </div>
                     <div>
@@ -96,7 +90,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                 </div>
             </section>
 
-            {/* THE STORY */}
             <section className="px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-20 mb-32">
                 <div className="space-y-12">
                     <div>
@@ -113,7 +106,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     </div>
                 </div>
 
-                {/* GALLERY MASONRY */}
                 <div className="grid grid-cols-1 gap-8">
                     {project.gallery && project.gallery.map((img, i) => (
                         <div key={i} className="rounded-xl overflow-hidden border border-white/10 bg-white/5">
@@ -123,7 +115,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                 </div>
             </section>
 
-            {/* NEXT PROJECT */}
             <section className="px-4 md:px-12 flex justify-center py-20 border-t border-white/10">
                 <Link href={`/work/${parseInt(params.id) + 1}`} className="group text-center">
                     <p className="text-sm font-mono text-slate-500 mb-4 uppercase tracking-widest">Next Case Study</p>

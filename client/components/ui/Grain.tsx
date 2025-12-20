@@ -3,12 +3,6 @@
 export default function Grain() {
     return (
         <div className="pointer-events-none fixed inset-0 z-[9998] opacity-[0.04] mix-blend-overlay">
-            {/* 
-                Optimization: 
-                Instead of dragging a huge SVG or animating transforms constantly, 
-                we use a tiny static noise pattern. The eye barely notices the difference 
-                but the CPU saves ~15% load.
-             */}
             <div
                 className="w-full h-full bg-repeat"
                 style={{

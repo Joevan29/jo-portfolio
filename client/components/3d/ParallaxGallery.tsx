@@ -21,21 +21,18 @@ export default function ParallaxGallery({ projects }: { projects: Project[] }) {
     const y1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const y2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
-    // Split projects into two columns
     const halfway = Math.ceil(projects.length / 2);
     const col1 = projects.slice(0, halfway);
     const col2 = projects.slice(halfway);
 
     return (
         <div ref={container} className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-8 px-4 z-10">
-            {/* Column 1 - Parallax Up */}
             <motion.div style={{ y: y1 }} className="flex flex-col gap-12 w-full md:w-1/2">
                 {col1.map((project) => (
                     <ProjectCard key={project.ID} project={project} />
                 ))}
             </motion.div>
 
-            {/* Column 2 - Parallax Down */}
             <motion.div style={{ y: y2 }} className="flex flex-col gap-12 w-full md:w-1/2 md:mt-24">
                 {col2.map((project) => (
                     <ProjectCard key={project.ID} project={project} />

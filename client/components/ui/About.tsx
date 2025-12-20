@@ -8,7 +8,6 @@ export default function About() {
     return (
         <section className="relative py-24 px-8 md:px-20 max-w-7xl mx-auto z-10 text-white">
 
-            {/* Header / Title */}
             <div className="mb-20 border-b border-white/10 pb-8 flex flex-col md:flex-row justify-between items-end gap-8">
                 <div className='flex flex-col'>
                     <h2 className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-4">
@@ -28,10 +27,8 @@ export default function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
 
-                {/* Left Column: Summary & Certifications */}
                 <div className='flex flex-col gap-12'>
 
-                    {/* Summary */}
                     <div>
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                             <span className="w-2 h-2 rounded-full bg-purple-500"></span>
@@ -43,7 +40,6 @@ export default function About() {
                         </p>
                     </div>
 
-                    {/* Certifications Badge Grid */}
                     <div>
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                             <span className="w-2 h-2 rounded-full bg-green-500"></span>
@@ -65,14 +61,12 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Right Column: Technical Stats */}
                 <div className='flex flex-col gap-8'>
                     <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
                         <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
                         Technical Arsenal
                     </h3>
 
-                    {/* Skill Bars/Tags */}
                     <div className="space-y-6">
                         <SkillGroup title="Languages" skills={["Python", "Go", "TypeScript", "SQL", "R", "JavaScript"]} />
                         <SkillGroup title="Web Tech" skills={["Next.js", "React.js", "Node.js", "Tailwind CSS", "Fiber"]} />
@@ -80,7 +74,6 @@ export default function About() {
                         <SkillGroup title="Infra & Tools" skills={["Docker", "Kubernetes", "Google Cloud", "PostgreSQL", "Kafka"]} />
                     </div>
 
-                    {/* Download CV Mini-CTA */}
                     <motion.a
                         href="/cv.pdf"
                         target="_blank"

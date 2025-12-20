@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 overflow-x-hidden cursor-none"> {/* cursor-none to hide default cursor */}
+      <body className="bg-slate-950 overflow-x-hidden cursor-none">
         <SmoothScroll>
           <CustomCursor />
           <Grain />

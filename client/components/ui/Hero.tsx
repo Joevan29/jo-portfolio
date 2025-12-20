@@ -10,7 +10,6 @@ export default function Hero() {
     return (
         <section className="h-screen flex flex-col items-center justify-center relative px-4 text-center z-10 w-full overflow-hidden">
 
-            {/* Top Badge */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -21,30 +20,23 @@ export default function Hero() {
                 Available for New Projects
             </motion.div>
 
-            {/* Main Identity: JOEVAN */}
             <motion.div
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.33, 1, 0.68, 1], delay: 0.2 }}
                 className="relative group cursor-default leading-none"
             >
-                {/* 
-                    "Hollow" effect with precise stroke. 
-                    Using mix-blend-mode to interact with background shapes.
-                */}
                 <h1 className="text-[15vw] md:text-[16vw] font-black tracking-tighter text-transparent select-none transition-all duration-700 hover:tracking-wide"
                     style={{ WebkitTextStroke: "2px rgba(255,255,255,0.7)" }}>
                     JOEVAN
                 </h1>
 
-                {/* Overlay Fill on Hover */}
                 <h1 className="absolute inset-0 text-[15vw] md:text-[16vw] font-black tracking-tighter text-white opacity-0 group-hover:opacity-100 transition-all duration-500 select-none pointer-events-none blur-sm group-hover:blur-0"
                     style={{ textShadow: "0 0 30px rgba(255,255,255,0.5)" }}>
                     JOEVAN
                 </h1>
             </motion.div>
 
-            {/* Refined Subtitle */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -62,14 +54,13 @@ export default function Hero() {
                 </p>
             </motion.div>
 
-            {/* MOVING BANNER (Replaces Scroll Button) */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden border-t border-white/5 bg-slate-950/80 backdrop-blur-md py-4 z-30">
                 <motion.div
                     className="flex whitespace-nowrap"
                     animate={{ x: "-50%" }}
                     transition={{
                         ease: "linear",
-                        duration: 30, // Slow, cinematic speed
+                        duration: 30,
                         repeat: Infinity
                     }}
                 >
@@ -81,7 +72,6 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Side Vignettes for cinematic feel */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-950 to-transparent pointer-events-none z-20 hidden md:block"></div>
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950 to-transparent pointer-events-none z-20 hidden md:block"></div>
 

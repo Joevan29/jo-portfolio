@@ -34,8 +34,6 @@ const experiences = [
 ];
 
 export default function Journey() {
-    // ANTI-LAG: No scroll listeners. CSS Sticky + Viewport triggers only.
-
     return (
         <section className="relative py-32 px-4 md:px-0 z-10 w-full max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-black text-center mb-24 text-white tracking-tighter">
@@ -43,7 +41,6 @@ export default function Journey() {
             </h2>
 
             <div className="relative">
-                {/* Central Line */}
                 <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[1px] bg-slate-800 -translate-x-1/2 overflow-hidden">
                     <motion.div
                         initial={{ height: "0%" }}
@@ -75,10 +72,8 @@ function Card({ experience, index }: { experience: any, index: number }) {
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
             className={`relative flex items-center md:justify-between w-full ${isEven ? "md:flex-row-reverse" : ""}`}
         >
-            {/* Spacer */}
             <div className="hidden md:block w-5/12" />
 
-            {/* Node */}
             <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -87,7 +82,6 @@ function Card({ experience, index }: { experience: any, index: number }) {
                 className="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-slate-950 border-2 border-cyan-500 z-10 shadow-[0_0_10px_rgba(6,182,212,0.8)]"
             />
 
-            {/* Card Content */}
             <div className="w-full md:w-5/12 pl-12 md:pl-0">
                 <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-500/30 hover:bg-white/10 transition-all duration-300 group">
                     <span className="inline-block px-3 py-1 mb-4 text-xs font-mono text-cyan-400 bg-cyan-900/20 rounded border border-cyan-500/20">

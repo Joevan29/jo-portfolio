@@ -15,16 +15,12 @@ export default function Home() {
     return (
         <main className="relative min-h-screen bg-slate-950 text-white selection:bg-cyan-500 selection:text-black">
 
-            {/* 1. Preloader passes state up */}
             <Preloader setIsLoading={setIsLoading} />
 
-            {/* 2. Background (Fixed) */}
             <div className="fixed inset-0 z-0">
                 <FloatingShapes />
             </div>
 
-            {/* 3. Main Content (ALWAYS RENDERED to fix Ref Error) */}
-            {/* We use opacity-0 to hide it visually during load, but it exists in DOM */}
             <div
                 className={`relative z-10 transition-opacity duration-1000 ease-in-out ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'
                     }`}

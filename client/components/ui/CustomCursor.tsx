@@ -12,7 +12,6 @@ export default function CustomCursor() {
         y: useMotionValue(0)
     }
 
-    // OPTIMIZATION: Tighter spring for snappier feel, less "floaty lag"
     const smoothOptions = { damping: 40, stiffness: 400, mass: 0.2 }
     const smoothMouse = {
         x: useSpring(mouse.x, smoothOptions),
@@ -55,7 +54,6 @@ export default function CustomCursor() {
                 x: "-50%",
                 y: "-50%"
             }}
-            // REMOVED 'backdrop-blur-sm' -> This was causing the heavy repaint lag
             className="fixed z-[9999] rounded-full bg-cyan-400 mix-blend-difference pointer-events-none hidden md:block will-change-transform"
         />
     )
