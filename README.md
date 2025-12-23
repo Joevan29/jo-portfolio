@@ -1,89 +1,90 @@
-# ✨ Joevan Pramana - Interactive Portfolio
+# ⚡ Joevan Pramana - Interactive 3D Portfolio
 
-![Project Status](https://img.shields.io/badge/status-active-success)
-![Next.js](https://img.shields.io/badge/Next.js-14-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38bdf8?style=for-the-badge&logo=tailwind-css)
+![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer)
 
-Portfolio web modern dan interaktif yang dibangun untuk menampilkan *showcase* proyek, pengalaman, dan keahlian teknis. Proyek ini menggabungkan desain minimalis dengan elemen 3D interaktif, animasi halus, dan transisi halaman yang dinamis.
+> *Sebuah portofolio web imersif yang menggabungkan desain minimalis dengan interaksi 3D, animasi fisika, dan pengalaman pengguna yang halus.*
 
-🔗 **Live Demo:** [Masukkan Link Deploy Kamu Di Sini]
+## 🌟 Tentang Proyek
 
-## 🚀 Fitur Utama
+Website ini bukan sekadar portofolio statis, melainkan sebuah *showcase* kemampuan teknis dalam membangun antarmuka web modern yang kompleks. Dibangun menggunakan **Next.js 14** (App Router), proyek ini mengintegrasikan elemen 3D reaktif, *smooth scrolling*, dan transisi halaman yang dinamis untuk menciptakan pengalaman *storytelling* yang unik bagi pengunjung.
 
-* **3D Interactive Elements:** Menggunakan `@react-three/fiber` dan `@react-three/rapier` untuk simulasi fisika pada objek 3D yang melayang dan responsif terhadap interaksi mouse.
-* **Smooth Scrolling:** Implementasi scroll yang halus menggunakan Lenis (`@studio-freight/react-lenis`) untuk pengalaman pengguna yang premium.
-* **Advanced Animations:**
-    * Transisi halaman dan *reveal text* menggunakan **Framer Motion**.
-    * Efek Parallax pada galeri proyek.
-    * Efek Magnetik pada tombol dan link navigasi.
-* **Custom Cursor:** Kursor kustom yang bereaksi (membesar/mengecil) saat *hover* pada elemen interaktif.
-* **Audio Feedback:** Efek suara *click* dan *hover* yang halus untuk meningkatkan *user experience*.
-* **Dynamic Footer:** Menampilkan waktu real-time Jakarta (WIB).
-* **Responsive Design:** Tata letak yang adaptif untuk desktop dan mobile menggunakan Tailwind CSS.
+🔗 **Live Demo:** [Tulis Link Vercel Kamu Disini]
 
-## 🛠️ Teknologi yang Digunakan
+## 🚀 Fitur Unggulan
 
-Proyek ini dibangun menggunakan *tech stack* modern:
+Proyek ini mengimplementasikan berbagai teknik *frontend* tingkat lanjut:
 
-* **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+* **Interactive 3D Physics:** Objek-objek 3D yang melayang, bertabrakan, dan merespons kursor mouse secara *real-time* menggunakan **React Three Fiber** & **Rapier Physics Engine**.
+* **Smooth Scrolling Experience:** Implementasi scroll momentum yang sangat halus menggunakan **Lenis** (`@studio-freight/react-lenis`), memberikan nuansa premium saat menjelajahi halaman.
+* **Parallax & Scroll Animations:**
+    * Galeri proyek dengan efek *parallax* (pergeseran kecepatan scroll).
+    * Teks yang muncul (*reveal*) secara elegan saat di-scroll.
+* **Magnetic Navigation:** Tombol dan elemen navigasi yang "menempel" dan mengikuti gerakan mouse secara magnetis.
+* **Custom Cursor & Grain:** Kursor kustom yang dinamis dan lapisan efek *film grain* untuk estetika visual yang mendalam.
+* **Audio Interaction:** Feedback suara halus saat *hover* dan *klik* untuk meningkatkan *user engagement*.
+
+## 🛠️ Tech Stack
+
+Dibuat dengan teknologi terkini di ekosistem React:
+
+* **Framework:** [Next.js 14](https://nextjs.org/) (App Router, Server Components)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
 * **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Animation:** [Framer Motion](https://www.framer.com/motion/) & [GSAP](https://greensock.com/gsap/)
-* **3D & WebGL:** [Three.js](https://threejs.org/), [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [Drei](https://github.com/pmndrs/drei)
-* **Physics:** [Rapier](https://rapier.rs/) (via `@react-three/rapier`)
+* **Animations:**
+    * [Framer Motion](https://www.framer.com/motion/) (Layout animations & transitions)
+    * [GSAP](https://greensock.com/gsap/) (Advanced sequencing)
+* **3D & WebGL:**
+    * [Three.js](https://threejs.org/)
+    * [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber)
+    * [@react-three/drei](https://github.com/pmndrs/drei) (Helpers)
+    * [@react-three/rapier](https://rapier.rs/) (Physics engine)
 * **State Management:** [Zustand](https://github.com/pmndrs/zustand)
 
 ## 📂 Struktur Proyek
 
-Berikut adalah gambaran singkat struktur folder proyek:
-
 ```bash
 client/
-├── app/                 # Next.js App Router (Pages & Layouts)
-│   ├── work/            # Halaman detail proyek dinamis [id]
-│   ├── layout.tsx       # Root layout (Cursor, SmoothScroll, Grain)
-│   └── page.tsx         # Homepage utama
+├── app/                    # Next.js App Router
+│   ├── layout.tsx          # Root Layout (Cursor, SmoothScroll, Audio)
+│   ├── page.tsx            # Halaman Utama (Hero, About, Works)
+│   └── work/[id]/          # Halaman Detail Proyek Dinamis
 ├── components/
-│   ├── 3d/              # Komponen Three.js (FloatingShapes, ParallaxGallery)
-│   ├── ui/              # Komponen UI (Header, Hero, About, Footer)
-│   └── utils/           # Utilitas (SoundManager)
+│   ├── 3d/                 # Komponen Three.js (Scene, Shapes, Gallery)
+│   ├── ui/                 # Komponen UI (Header, Hero, Footer, Preloader)
+│   └── utils/              # Logic Utilitas (SoundManager)
 ├── data/
-│   └── projects.ts      # Data statis untuk proyek-proyek
-└── public/
-    ├── images/          # Aset gambar proyek
-    ├── sounds/          # Efek suara (click.mp3, hover.mp3)
-    └── cv.pdf           # File Resume/CV
+│   └── projects.ts         # Data statis untuk konten portofolio
+└── public/                 # Aset statis (Images, Sounds, Fonts)
+```
+⚡ Cara Menjalankan (Local Development)
 
-⚡ Instalasi & Menjalankan Project
+Ikuti langkah ini untuk menjalankan proyek di komputer lokal:
 
-Ikuti langkah-langkah ini untuk menjalankan proyek di lokal komputer kamu:
-
-    Clone repositori:
-    Bash
-
-git clone [https://github.com/username-kamu/nama-repo.git](https://github.com/username-kamu/nama-repo.git)
-cd nama-repo/client
-
+Clone repositori:
+```Bash
+git clone [https://github.com/Joevan29/jo-portfolio.git](https://github.com/Joevan29/jo-portfolio.git)
+cd jo-portfolio/client
+```
 Install dependencies: Pastikan kamu sudah menginstall Node.js.
-Bash
-
+```Bash
 npm install
-# atau
+# atau jika menggunakan yarn
 yarn install
-
-Jalankan development server:
-Bash
-
+```
+Jalankan server development:
+```Bash
     npm run dev
-    # atau
-    yarn dev
+    Buka browser: Kunjungi http://localhost:3000 untuk melihat hasilnya.
+```
 
-    Buka di browser: Buka http://localhost:3000 untuk melihat hasilnya.
+📝 Manajemen Konten
 
-📝 Data Proyek
+Data proyek seperti judul, deskripsi, gambar, dan tech stack dikelola secara terpusat. Kamu bisa mengubah atau menambah proyek baru dengan mudah melalui file: client/data/projects.ts.
 
-Konten proyek (Judul, Deskripsi, Tech Stack, Gambar) dikelola secara terpusat di file client/data/projects.ts. Kamu bisa menambahkan atau mengedit proyek dengan mudah melalui file tersebut.
 👨‍💻 Author
 
 Joevan Pramana Achmad
@@ -96,4 +97,4 @@ Joevan Pramana Achmad
 
     Email: joevanpan@outlook.com
 
-© 2024 Joevan. Built with Next.js & ❤️.
+© 2024 Joevan Pramana. Built with code & creativity.
