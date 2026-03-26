@@ -51,7 +51,8 @@ export default function About() {
                                 "IT Specialist - Cybersecurity",
                                 "Google Cloud Foundations",
                                 "Vertex AI Prompt Design",
-                                "GenAI Apps with Gemini"
+                                "GenAI Apps with Gemini",
+                                "Junior Web Developer BNSP"
                             ].map((cert, i) => (
                                 <span key={i} className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-white/10 hover:border-cyan-500/50 transition-colors cursor-default">
                                     {cert}
@@ -68,8 +69,8 @@ export default function About() {
                     </h3>
 
                     <div className="space-y-6">
-                        <SkillGroup title="Languages" skills={["Python", "Go", "TypeScript", "SQL", "R", "JavaScript"]} />
-                        <SkillGroup title="Web Tech" skills={["Next.js", "React.js", "Node.js", "Tailwind CSS", "Fiber"]} />
+                        <SkillGroup title="Languages" skills={["Python", "Go", "TypeScript", "SQL", "R", "JavaScript", "PHP"]} />
+                        <SkillGroup title="Web Tech" skills={["Next.js", "React.js", "Node.js", "Tailwind CSS", "Fiber", "Framework7", "CI3"]} />
                         <SkillGroup title="Data & ML" skills={["Pandas", "Scikit-learn", "BigQuery", "Looker Studio", "Power BI"]} />
                         <SkillGroup title="Infra & Tools" skills={["Docker", "Kubernetes", "Google Cloud", "PostgreSQL", "Kafka"]} />
                     </div>

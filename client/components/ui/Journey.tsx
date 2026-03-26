@@ -4,6 +4,13 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
+        title: "Mobile Developer",
+        company: "PT Kirana Megatara",
+        date: "Mar 2026 - Present",
+        desc: "Developing mobile applications as a Mobile Developer.",
+        stack: ["Mobile Development", "Framework7"]
+    },
+    {
         title: "Back End Developer Intern",
         company: "PT Asuransi BRI Life",
         date: "May - Jul 2025",
