@@ -36,7 +36,7 @@ export default function Hero() {
                     <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(34,211,238,0.15)] group-hover/avatar:border-cyan-400/50 transition-colors duration-500">
                         {/* Pastikan file foto sudah ada di public/images/profile.jpg */}
                         <img 
-                            src="/images/profile.jpg" 
+                            src="/images/profile.jpeg" 
                             alt="Joevan Pramana Achmad" 
                             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" 
                         />
@@ -45,10 +45,10 @@ export default function Hero() {
                     <div className="absolute inset-0 rounded-full border border-cyan-400/20 scale-125 animate-pulse pointer-events-none"></div>
                 </div>
 
-                {/* 3. Nama Panjang (Lebih Kecil & Rata Sebaris) */}
-                <div className="flex flex-col items-center w-full max-w-5xl mx-auto px-4 mt-2">
-                    <h1 className="text-[8vw] md:text-[4.5vw] font-black uppercase tracking-widest text-center text-white leading-tight">
-                        JOEVAN PRAMANA <span className="text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.6)" }}>ACHMAD</span>
+                {/* 3. Nama Panjang (Solid Putih, Satu Baris, & Minimalis) */}
+                <div className="flex flex-col items-center w-full max-w-6xl mx-auto px-4 mt-2">
+                    <h1 className="text-[7vw] md:text-[4vw] font-black uppercase tracking-[0.15em] text-center text-white leading-tight">
+                        JOEVAN PRAMANA ACHMAD
                     </h1>
                 </div>
             </motion.div>
