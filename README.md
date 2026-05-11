@@ -12,7 +12,7 @@
 
 Website ini bukan sekadar portofolio statis, melainkan sebuah *showcase* kemampuan teknis dalam membangun antarmuka web modern yang kompleks. Dibangun menggunakan **Next.js 14** (App Router), proyek ini mengintegrasikan elemen 3D reaktif, *smooth scrolling*, dan transisi halaman yang dinamis untuk menciptakan pengalaman *storytelling* yang unik bagi pengunjung.
 
-🔗 **Live Demo:** [Tulis Link Vercel Kamu Disini]
+🔗 **Live Demo:** joevan-portfolio.vercel.app
 
 ## 🚀 Fitur Unggulan
 
