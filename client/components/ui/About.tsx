@@ -19,7 +19,7 @@ export default function About() {
                 </div>
                 <div className="text-right">
                     <p className="text-xl md:text-2xl font-light text-slate-300">
-                        Information Systems Student<br />
+                        Information Systems Graduate<br />
                         <span className="text-cyan-400 font-mono text-base">GPA 3.93 • National University</span>
                     </p>
                 </div>
@@ -47,6 +47,7 @@ export default function About() {
                         </h3>
                         <div className="flex flex-wrap gap-3">
                             {[
+                                "BNSP Certified Junior Web Developer",
                                 "Google Cloud Data Analytics",
                                 "IT Specialist - Cybersecurity",
                                 "Google Cloud Foundations",
@@ -68,12 +69,12 @@ export default function About() {
                     </h3>
 
                     <div className="space-y-6">
-                        <SkillGroup title="Languages" skills={["Python", "Go", "TypeScript", "SQL", "R", "JavaScript"]} />
-                        <SkillGroup title="Web Tech" skills={["Next.js", "React.js", "Node.js", "Tailwind CSS", "Fiber"]} />
-                        <SkillGroup title="Data & ML" skills={["Pandas", "Scikit-learn", "BigQuery", "Looker Studio", "Power BI"]} />
-                        <SkillGroup title="Infra & Tools" skills={["Docker", "Kubernetes", "Google Cloud", "PostgreSQL", "Kafka"]} />
+                        <SkillGroup title="Languages" skills={["TypeScript", "JavaScript", "PHP", "Go", "SQL", "Python", "R"]} />
+                        <SkillGroup title="Web Tech" skills={["Next.js", "Vue.js", "React.js", "Node.js", "CodeIgniter", "Tailwind CSS"]} />
+                        <SkillGroup title="Data & ML" skills={["Pandas", "NumPy", "YOLO", "BigQuery", "Looker Studio", "Power BI"]} />
+                        <SkillGroup title="Infra & Tools" skills={["Docker", "Kubernetes", "Kafka", "PostgreSQL", "Microsoft SQL Server", "REST API", "Microservices"]} />
                     </div>
-
+                    
                     <motion.a
                         href="/cv.pdf"
                         target="_blank"
