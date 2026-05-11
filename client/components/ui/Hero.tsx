@@ -45,14 +45,10 @@ export default function Hero() {
                     <div className="absolute inset-0 rounded-full border border-cyan-400/20 scale-125 animate-pulse pointer-events-none"></div>
                 </div>
 
-                {/* 3. Nama Panjang (Typography Raksasa) */}
-                <div className="flex flex-col items-center leading-[0.85]">
-                    <h1 className="text-[9vw] md:text-[7vw] font-black uppercase tracking-tighter text-white">
-                        Joevan Pramana
-                    </h1>
-                    <h1 className="text-[9vw] md:text-[7vw] font-black uppercase tracking-tighter text-transparent"
-                        style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.4)" }}>
-                        Achmad
+                {/* 3. Nama Panjang (Lebih Kecil & Rata Sebaris) */}
+                <div className="flex flex-col items-center w-full max-w-5xl mx-auto px-4 mt-2">
+                    <h1 className="text-[8vw] md:text-[4.5vw] font-black uppercase tracking-widest text-center text-white leading-tight">
+                        JOEVAN PRAMANA <span className="text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.6)" }}>ACHMAD</span>
                     </h1>
                 </div>
             </motion.div>
