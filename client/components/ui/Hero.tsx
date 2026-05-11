@@ -19,44 +19,41 @@ export default function Hero() {
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
                 Available for New Projects
             </motion.div>
-
+            
             <motion.div
-                initial={{ y: "100%", opacity: 0 }}
+                initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: [0.33, 1, 0.68, 1], delay: 0.2 }}
-                className="relative group cursor-default flex flex-col items-center justify-center w-full z-20 my-8"
+                className="relative z-20 flex flex-col items-center justify-center text-center w-full"
             >
-                {/* 1. Micro-Typography: Identitas Rahasia (Sekarang Rapi di Tengah) */}
-                <div className="mb-2 md:mb-4 text-[10px] md:text-xs font-mono tracking-widest opacity-80 group-hover:opacity-100 transition-opacity duration-700 text-center">
+                {/* 1. Micro-Typography: Identitas Kode */}
+                <div className="mb-6 text-[10px] md:text-xs font-mono tracking-widest opacity-70 group-hover:opacity-100 transition-opacity duration-700">
                     <span className="text-purple-400">const</span> <span className="text-cyan-400">identity</span> <span className="text-white">=</span> <span className="text-green-400">"Backend Engineer disguised as a Frontend Dev"</span><span className="text-white">;</span>
                 </div>
 
-                {/* 2. Wrapper Teks Raksasa agar ukurannya presisi */}
-                <div className="flex flex-col items-center leading-[0.9]">
-                    
-                    {/* Baris Pertama: JOEVAN */}
-                    <div className="relative">
-                        <h1 className="text-[13vw] md:text-[11vw] font-black tracking-tighter text-transparent select-none transition-all duration-700 group-hover:tracking-wide"
-                            style={{ WebkitTextStroke: "2px rgba(255,255,255,0.7)" }}>
-                            JOEVAN
-                        </h1>
-                        <h1 className="absolute inset-0 text-[13vw] md:text-[11vw] font-black tracking-tighter text-white opacity-0 group-hover:opacity-100 transition-all duration-700 select-none pointer-events-none blur-sm group-hover:blur-0 group-hover:tracking-wide"
-                            style={{ textShadow: "0 0 25px rgba(255,255,255,0.5)" }}>
-                            JOEVAN
-                        </h1>
+                {/* 2. Foto Profil (Avatar Bulat) */}
+                <div className="relative group/avatar mb-8">
+                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(34,211,238,0.15)] group-hover/avatar:border-cyan-400/50 transition-colors duration-500">
+                        {/* Pastikan file foto sudah ada di public/images/profile.jpg */}
+                        <img 
+                            src="/images/profile.jpg" 
+                            alt="Joevan Pramana Achmad" 
+                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" 
+                        />
                     </div>
+                    {/* Efek Ring Luar yang Menyala */}
+                    <div className="absolute inset-0 rounded-full border border-cyan-400/20 scale-125 animate-pulse pointer-events-none"></div>
+                </div>
 
-                    {/* Baris Kedua: ENGINEER (Tanpa margin negatif, murni ditumpuk secara vertikal) */}
-                    <div className="relative">
-                        <h1 className="text-[13vw] md:text-[11vw] font-black tracking-tighter text-transparent select-none transition-all duration-700 group-hover:tracking-wide"
-                            style={{ WebkitTextStroke: "2px rgba(34,211,238,0.5)" }}>
-                            ENGINEER
-                        </h1>
-                        <h1 className="absolute inset-0 text-[13vw] md:text-[11vw] font-black tracking-tighter text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-700 select-none pointer-events-none blur-sm group-hover:blur-0 group-hover:tracking-wide"
-                            style={{ textShadow: "0 0 25px rgba(34,211,238,0.5)" }}>
-                            ENGINEER
-                        </h1>
-                    </div>
+                {/* 3. Nama Panjang (Typography Raksasa) */}
+                <div className="flex flex-col items-center leading-[0.85]">
+                    <h1 className="text-[9vw] md:text-[7vw] font-black uppercase tracking-tighter text-white">
+                        Joevan Pramana
+                    </h1>
+                    <h1 className="text-[9vw] md:text-[7vw] font-black uppercase tracking-tighter text-transparent"
+                        style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.4)" }}>
+                        Achmad
+                    </h1>
                 </div>
             </motion.div>
             
