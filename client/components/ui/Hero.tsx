@@ -66,10 +66,6 @@ export default function Hero() {
                 </h2>
 
                 <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-slate-500 to-transparent mx-auto my-5"></div>
-
-                <p className="text-xs md:text-sm text-slate-400 font-mono tracking-wide">
-                    ENGINEERING SCALABLE SYSTEMS FOR THE FUTURE.
-                </p>
             </motion.div>
         
             <div className="absolute bottom-0 left-0 w-full overflow-hidden border-t border-white/5 bg-slate-950/80 backdrop-blur-md py-4 z-30">
