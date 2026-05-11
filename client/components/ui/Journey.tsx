@@ -4,31 +4,38 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
+        title: "Mobile Developer Intern",
+        company: "PT Kirana Megatara Tbk",
+        date: "Mar 2026 - Present",
+        desc: "Engineered a secure API Gateway with PHP (CodeIgniter) & optimized real-time SAP logistics data for enterprise mobile applications.",
+        stack: ["PHP", "CodeIgniter", "SQL", "API Gateway"]
+    },
+    {
         title: "Back End Developer Intern",
         company: "PT Asuransi BRI Life",
         date: "May - Jul 2025",
-        desc: "Developed RESTful APIs with Node.js & optimized PostgreSQL queries.",
-        stack: ["Node.js", "PostgreSQL", "REST API", "Express"]
+        desc: "Developed RESTful APIs with Node.js, optimized PostgreSQL queries, and built automated customer notification systems.",
+        stack: ["Node.js", "PostgreSQL", "REST API", "Cron Jobs"]
     },
     {
         title: "Big Data Analytics Intern",
         company: "Kimia Farma x Rakamin",
         date: "Apr - May 2025",
-        desc: "Analyzed 672k transactions & built Looker Studio dashboards.",
-        stack: ["BigQuery", "Looker Studio", "Python", "SQL"]
+        desc: "Processed 670k+ transaction records in BigQuery & developed dynamic visualization dashboards using Looker Studio.",
+        stack: ["BigQuery", "Looker Studio", "SQL", "Data Analytics"]
     },
     {
-        title: "Information Systems Student",
+        title: "Bachelor of Information Systems",
         company: "National University",
-        date: "2022 - Present",
-        desc: "GPA 3.93. Focusing on Cloud Computing & Security.",
-        stack: ["Cloud Architecture", "Cybersecurity", "IoT"]
+        date: "Sep 2022 - Mar 2026",
+        desc: "Graduated with GPA 3.93/4.00. Specialized focus on Fullstack Development and Backend Architectures.",
+        stack: ["System Design", "Backend Architecture", "Fullstack"]
     },
     {
         title: "IoT Intern",
         company: "PT. Jaya Konsultan Indonesia",
         date: "Apr - May 2021",
-        desc: "Built automated temperature monitoring systems with Arduino.",
+        desc: "Built automated temperature monitoring systems and digital clock with Arduino Uno and sensors.",
         stack: ["Arduino", "C++", "IoT", "Electronics"]
     }
 ];
