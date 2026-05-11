@@ -34,20 +34,21 @@ export default function Hero() {
                 {/* 2. Foto Profil (Avatar Bulat) */}
                 <div className="relative group/avatar mb-8">
                     <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(34,211,238,0.15)] group-hover/avatar:border-cyan-400/50 transition-colors duration-500">
-                        {/* Pastikan file foto sudah ada di public/images/profile.jpg */}
+                        {/* Ditambahkan 'object-top' agar fokus potongan gambar dari ujung atas kepala */}
                         <img 
                             src="/images/profile.jpeg" 
                             alt="Joevan Pramana Achmad" 
-                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" 
+                            className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" 
                         />
                     </div>
                     {/* Efek Ring Luar yang Menyala */}
                     <div className="absolute inset-0 rounded-full border border-cyan-400/20 scale-125 animate-pulse pointer-events-none"></div>
                 </div>
 
-                {/* 3. Nama Panjang (Solid Putih, Satu Baris, & Minimalis) */}
+                {/* 3. Nama Panjang (Spasi Normal) */}
                 <div className="flex flex-col items-center w-full max-w-6xl mx-auto px-4 mt-2">
-                    <h1 className="text-[7vw] md:text-[4vw] font-black uppercase tracking-[0.15em] text-center text-white leading-tight">
+                    {/* Mengganti tracking-[0.15em] menjadi tracking-tight agar jarak huruf rapat dan solid */}
+                    <h1 className="text-[7.5vw] md:text-[4vw] font-black uppercase tracking-tight text-center text-white leading-tight">
                         JOEVAN PRAMANA ACHMAD
                     </h1>
                 </div>
