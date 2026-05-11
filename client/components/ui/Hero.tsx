@@ -58,7 +58,6 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 1 }}
-                {/* Mengurangi margin-top (mt) dan menambahkan margin-bottom (mb) ekstra agar menjauh dari marquee */}
                 className="mt-6 md:mt-8 max-w-3xl px-6 relative z-20 mb-20 md:mb-16"
             >
                 <h2 className="text-lg md:text-3xl lg:text-4xl font-light text-white leading-tight mb-4">
@@ -66,8 +65,12 @@ export default function Hero() {
                 </h2>
 
                 <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-slate-500 to-transparent mx-auto my-5"></div>
+
+                <p className="text-xs md:text-sm text-slate-400 font-mono tracking-wide">
+                    ENGINEERING SCALABLE SYSTEMS FOR THE FUTURE.
+                </p>
             </motion.div>
-        
+            
             <div className="absolute bottom-0 left-0 w-full overflow-hidden border-t border-white/5 bg-slate-950/80 backdrop-blur-md py-4 z-30">
                 <motion.div
                     className="flex whitespace-nowrap"
