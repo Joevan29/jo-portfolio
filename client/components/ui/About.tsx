@@ -35,8 +35,7 @@ export default function About() {
                             Summary
                         </h3>
                         <p className="text-slate-400 leading-relaxed text-lg">
-                            A young technology professional combining expertise in software development, data analysis, and cloud computing to deliver business value.
-                            Experienced in Back-End Development (Node.js, SQL), Big Data Analytics (BigQuery, Looker Studio), and Cloud Security.
+                            A Backend Engineer disguised as a Frontend Developer. While I build highly responsive modern user interfaces (Next.js, Vue.js, React), my core expertise lies in designing robust backend architectures (Node.js, Golang, PHP/CodeIgniter), IoT, and big data. Backed by enterprise experience in secure API gateway engineering, complex database optimization, and bridging high-performance cloud-native infrastructures (Docker, Kubernetes) to deliver scalable, end-to-end digital solutions.
                         </p>
                     </div>
 
