@@ -5,7 +5,7 @@ import MaskText from './MaskText';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
-    const marqueeText = " • SOFTWARE ENGINEER • DATA SCIENTIST • CLOUD ARCHITECT • SYSTEM DESIGN • BACKEND ENGINEERING • BIG DATA ANALYTICS";
+    const marqueeText = " • BACKEND ENGINEER • FULLSTACK DEVELOPER • MOBILE DEVELOPMENT • CLOUD ARCHITECTURE • SYSTEM DESIGN • API ENGINEERING";
 
     return (
         <section className="h-screen flex flex-col items-center justify-center relative px-4 text-center z-10 w-full overflow-hidden">
@@ -44,7 +44,7 @@ export default function Hero() {
                 className="mt-12 max-w-3xl px-6 relative z-20"
             >
                 <h2 className="text-xl md:text-4xl font-light text-white leading-tight mb-6">
-                    Building <span className="text-cyan-400 font-medium font-serif italic">robust</span> digital infrastructure & <br className="hidden md:block" /> transforming raw data into <span className="text-purple-400 font-medium font-serif italic">intelligence</span>.
+                    Architecting <span className="text-cyan-400 font-medium font-serif italic">robust</span> backend systems & <br className="hidden md:block" /> crafting <span className="text-purple-400 font-medium font-serif italic">seamless</span> mobile and web experiences.
                 </h2>
 
                 <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-slate-500 to-transparent mx-auto my-8"></div>
